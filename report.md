@@ -6,11 +6,11 @@ This report documents the final project I did for MIP 280A4, Microbial Sequence 
 
 It is written in [Markdown format](https://www.markdownguide.org/basic-syntax/). 
 
-## Step 1: Download GitHub repository
+## Step 1: Clone GitHub repository
 
-1. Download GitHub repository
+1. Clone GitHub repository
 ```
-ADD DOWNLOAD COMMAND
+git clone "url to starting files"
 ```
 
 ## Step 2: Retrieve Illumina and Nanopore data files

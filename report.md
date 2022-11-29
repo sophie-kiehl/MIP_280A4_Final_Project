@@ -15,7 +15,7 @@ git clone "url to starting files"
 
 ## Step 2: Retrieve Illumina and Nanopore data files
 
-1. Enter server and navigate to directory where data files are stored
+1. Enter thoth server and navigate to directory where data files are stored
 
 ```
 ssh skiehl@thoth01.cvmbs.colostate.edu
@@ -51,13 +51,13 @@ which fastqc
 3. Check quality of paired-end Illumina data
 
 ```
-fastqc DATA1.fastq DATA2.fastq
+fastqc Planococcus_Illumina_R1.fastq Planococcus_Illumina_R2.fastq
 ```
 
 4. Check quality of Nanopore data
 
 ```
-fastqc DATA.fastq
+fastqc Planococcus_Nanopore.fastq
 ```
 
 5. Push quality report into GitHub repository

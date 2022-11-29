@@ -17,10 +17,16 @@ git clone "url to starting files"
 
 1. Enter server and navigate to directory where data files are stored
 
+```
+ssh skiehl@thoth01.cvmbs.colostate.edu
+
+cd /home/data_for_classes/2022_MIP_280A4/final_project_datasets
+```
+
 2. Copy files into directory with GitHub repository
 
 ```
-ADD CP COMMAND
+cp Planococcus* ~/MIP_280A4_Final_Project
 ```
 3. Push Illumina and Nanopore fastq files into GitHub repository
 

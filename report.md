@@ -1,20 +1,34 @@
 # MIP 280A4 Final Project 2022
 
+## Initial Summary
+
 This report documents the final project I did for MIP 280A4, Microbial Sequence Analysis, in the fall of 2022. In this project, I used Illumina and Nanopore sequencing data from a bacterial genome to identify a 
 
-It is written in [Markdown format](https://www.markdownguide.org/basic-syntax/).  
+It is written in [Markdown format](https://www.markdownguide.org/basic-syntax/). 
 
-## Step 1: Retrieve Illumina and Nanopore data files
+## Step 1: Download GitHub repository
+
+1. Download GitHub repository
+```
+ADD DOWNLOAD COMMAND
+```
+
+## Step 2: Retrieve Illumina and Nanopore data files
 
 1. Enter server and navigate to directory where data files are stored
 
-2. Copy files into working directory (directory where GitHub repository is located)
+2. Copy files into directory with GitHub repository
 
 ```
 ADD CP COMMAND
 ```
+3. Push Illumina and Nanopore fastq files into GitHub repository
 
-## Step 2: Quality check
+```
+ADD PUSH COMMAND
+```
+
+## Step 3: Quality check
 
 1. Enter conda environment 
 
@@ -40,7 +54,13 @@ fastqc DATA1.fastq DATA2.fastq
 fastqc DATA.fastq
 ```
 
-## Step 3: Clean Illumina data
+5. Push quality report into GitHub repository
+
+```
+ADD PUSH COMMAND 
+```
+
+## Step 4: Clean Illumina data
 
 1. Check version of cutadapt
 
@@ -63,7 +83,13 @@ cutadapt \
    | tee cutadapt.log
 ```
 
-## Step 4: Quality recheck
+3. Push trimmed files into GitHub repository
+
+```
+ADD PUSH COMMAND
+```
+
+## Step 5: Quality recheck
 
 1. Check trimmed Illumina quality
 
@@ -71,15 +97,20 @@ cutadapt \
 fastqc DATA1_trimmed.fastq DATA2_trimmed.fastq
 ```
 
-2. Compare data before and after trimming
+2. Push quality report to GitHub repository
 
-    a. HOW MANY ILLUMINA READS CONTAINED ADAPTERS?
+```
+ADD PUSH COMMAND
+```
+
+3. Compare data before and after trimming
+
+    a. HOW MANY ILLUMINA READS CONTAINED ADAPTERS THAT WERE TRIMMED?
 
     b. WHAT PERCENT OF READ PAIRS MADE IT THROUGH FILTERING?
     
-    c. lINK TO QUALITY REPORT IN GITHUB
     
-## Step 5: Assemble Illumina reads
+## Step 6: Assemble Illumina reads
 
 1. Create de novo assembly using SPAdes assembler (in conda environment)
 
@@ -90,26 +121,61 @@ spades.py   -o paired_spades_assembly \
    -m 24 -t 18
 ```
 
-## Step 6: Assemble Illumina and Nanopore reads
+2. Push assembly output to GitHub repository
+
+```
+ADD PUSH COMMAND
+```
+
+## Step 7: Assemble Illumina and Nanopore reads
 
 1. Create de novo assembly using SPAdes assembler (in conda environment)
 
 ```
-spades.py   -o paired_spades_assembly \
+spades.py   -o paired_and_nanopore_spades_assembly \
    --pe1-1 DATA1_trimmed.fastq \
    --pe1-2 DATA2_trimmed.fastq \
    --nanopore NANOPOREDATA.fastq \
    -m 24 -t 18
 ```
 
-## Step 7: Compare assemblies
+2. Push assembly output to GitHub repository
 
-1. Contig lengths
+```
+ADD PUSH COMMAND
+```
+
+## Step 8: Compare assemblies
+
+1. Number of contigs
+
+    a. HOW MANY CONTIGS ARE IN EACH ASSEMBLY?
+
+2. Number of scaffolds
+
+    a. HOW MANY SCAFFOLDS ARE IN EACH ASSEMBLY?
+
+3. Contig lengths
     
     a. WHAT ARE THE LENGTHS OF THE 12 LONGEST CONTIGS OF EACH?
     
-2. Contig stats
+4. Contig stats
 
     a. WHAT IS THE N50 FOR THE 12 LONGEST CONTIGS OF EACH?
     
-## Step 8: BLAST contigs
+## Step 9: BLAST contigs
+
+1. If there are a larger number of contigs, extract top 12 contigs from Illumina and Nanopore assembly
+
+```
+ADD EXTRACT COMMAND
+```
+
+2. Go to https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
+
+3. Record search parameters
+
+4. Record top 5 hits and percent identity for each of the first 12 contigs
+
+## Step 10: Genome alignment
+

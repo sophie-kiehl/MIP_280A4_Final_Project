@@ -51,12 +51,17 @@ which fastqc
 fastqc Planococcus_Illumina_R1.fastq Planococcus_Illumina_R2.fastq
 ```
 
+Quality of first read: https://htmlpreview.github.io/https://github.com/sophie-kiehl/MIP_280A4_Final_Project/blob/main/Quality_Control_and_Trimming/Planococcus_Illumina_R1_fastqc.html
+
+Quality of second read: https://htmlpreview.github.io/https://github.com/sophie-kiehl/MIP_280A4_Final_Project/blob/main/Quality_Control_and_Trimming/Planococcus_Illumina_R2_fastqc.html
+
 4. Check quality of Nanopore data
 
 ```
 fastqc Planococcus_Nanopore.fastq
-
 ```
+
+Quality of read: https://htmlpreview.github.io/https://github.com/sophie-kiehl/MIP_280A4_Final_Project/blob/main/Quality_Control_and_Trimming/Planococcus_Nanopore_fastqc.html
 
 5. Create directory to deposit output of fastqc
 

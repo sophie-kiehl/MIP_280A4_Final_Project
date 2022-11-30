@@ -241,26 +241,13 @@ grep -c NODE ./paired_spades_assembly/scaffolds.fasta
 grep -c NODE ./paired_and_nanopore_spades_assembly/scaffolds.fasta
 ```
 
-Find the number of lines in the 12 longest contigs for each assembly
+3. Find the length of the 12 longest contigs for each assembly
 
 ```
-grep -n NODE ./paired_spades_assembly/contigs.fasta
-grep -n NODE ./paired_and_nanopore_spades_assembly/contigs.fasta
+grep NODE ./paired_spades_assembly/contigs.fasta
+grep NODE ./paired_and_nanopore_spades_assembly/contigs.fasta
 ```
-
-For example, the first contig in the Illumina only data is from line 1 to 27706 (contig 2 begins on line 27707).
-
-Subtract the line number between nodes to find the number of lines in each contig
-
-4. Condense contig reads onto single line
-
-```
-seqtk seq -A ./paired_spades_assembly/contigs.fasta | head -24 > ./paired_spades_assembly/first_12_contigs.fasta
-seqtk seq -A ./paired_and_nanopore_spades_assembly/contigs.fasta | head -24 > ./paired_and_nanopore_spades_assembly/first_12_contigs.fasta
-```
-
-5. Count the number of characters on read lines to find length of contigs
-
+The length of each contig is in the header
 
 
 | Assembly | Number of contigs | Number of scaffolds | N50 |

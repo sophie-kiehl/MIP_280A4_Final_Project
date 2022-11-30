@@ -75,6 +75,14 @@ fastqc Planococcus_Nanopore.fastq
 
 Quality of read: https://htmlpreview.github.io/?https://github.com/sophie-kiehl/MIP_280A4_Final_Project/blob/main/Quality_Control_and_Trimming/Planococcus_Nanopore_fastqc.html
 
+There were 1371 reads. The quality report showed errors on per base sequence quality, per base sequence content, and per sequence GC content and warnings on per sequence quality scores and sequence length distribution.
+
+<img width="872" alt="Error on per base sequence quality" src="https://user-images.githubusercontent.com/115187825/204870502-4722776d-fd0f-4b58-bd48-2d83244f3881.png">
+on.
+
+<img width="871" alt="Error on per base sequence content" src="https://user-images.githubusercontent.com/115187825/204870613-8cea2ba2-f858-4122-8ff0-16ba00cf80f8.png">
+
+
 5. Create directory to deposit output of fastqc
 
 ```

@@ -106,12 +106,12 @@ git push origin main
 which cutadapt
 ```
 
-2. Trim Nextera adapters and low-quality reads
+2. Trim Universal adapters (as this was the most prevalent adapter according to the fastqc quality reports) and low-quality reads (Phred score beneath 30)
 
 ```
 cutadapt \
-   -a CTGTCTCTTATACACATCT \
-   -A CTGTCTCTTATACACATCT \
+   -a AGATCGGAAGAG \
+   -A AGATCGGAAGAG \
    -q 30,30 \
    --minimum-length 80 \
    -o /Quality_Control_and_Trimming/Planococcus_Illumina_R1_trimmed.fastq \

@@ -208,8 +208,8 @@ There were 818,439 reverse reads after trimming. Otherwise, the results from thi
 
 ```
 spades.py   -o paired_spades_assembly \
-   --pe1-1 DATA1_trimmed.fastq \
-   --pe1-2 DATA2_trimmed.fastq \
+   --pe1-1 Planococcus_Illumina_R1_trimmed.fastq \
+   --pe1-2 Planococcus_Illumina_R2_trimmed.fastq \
    -m 24 -t 18
 ```
 
@@ -225,9 +225,9 @@ ADD PUSH COMMAND
 
 ```
 spades.py   -o paired_and_nanopore_spades_assembly \
-   --pe1-1 DATA1_trimmed.fastq \
-   --pe1-2 DATA2_trimmed.fastq \
-   --nanopore NANOPOREDATA.fastq \
+   --pe1-1 Planococcus_Illumina_R1_trimmed.fastq \
+   --pe1-2 Planococcus_Illumina_R2_trimmed.fastq \
+   --nanopore Planococcus_Nanopore.fastq \
    -m 24 -t 18
 ```
 

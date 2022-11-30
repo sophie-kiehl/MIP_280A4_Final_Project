@@ -232,7 +232,7 @@ For example, the first contig is from line 1 to line 27706
 4. Extract the first contig
 
 ```
-head -n 17706 contigs.fasta > contig_1.fasta
+head -n 27706 contigs.fasta > contig_1.fasta
 ```
 
 ## Step 7: Assemble Illumina and Nanopore reads

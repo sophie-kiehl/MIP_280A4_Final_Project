@@ -71,6 +71,16 @@ git commit -m "fastqc quality reports for Illumina and Nanopore"
 git push origin main
 ```
 
+6. Push compressed raw NGS data into GitHub repository
+
+```
+git add Planococcus*.zip
+
+git commit -m "compressed raw NGS data (Illumina and Nanopore)"
+
+git push origin main
+```
+
 ## Step 4: Clean Illumina data
 
 1. Check version of cutadapt

@@ -255,7 +255,8 @@ Subtract the line number between nodes to find the number of lines in each conti
 4. Condense contig reads onto single line
 
 ```
-seqtk seq -A contigs.fasta | head -24 > first_12_contigs.fasta
+seqtk seq -A ./paired_spades_assembly/contigs.fasta | head -24 > ./paired_spades_assembly/first_12_contigs.fasta
+seqtk seq -A ./paired_and_nanopore_spades_assembly/contigs.fasta | head -24 > ./paired_and_nanopore_spades_assembly/first_12_contigs.fasta
 ```
 
 5. Count the number of characters on read lines to find length of contigs

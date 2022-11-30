@@ -221,6 +221,20 @@ cd paired_spades_assembly
 grep -c NODE contigs.fasta
 ```
 
+3. Find the line number range of each contig
+
+```
+grep -n NODE contigs.fasta
+```
+
+For example, the first contig is from line 1 to line 27706
+
+4. Extract the first contig
+
+```
+head -n 17706 contigs.fasta > contig_1.fasta
+```
+
 ## Step 7: Assemble Illumina and Nanopore reads
 
 1. Create de novo assembly using SPAdes assembler (in conda environment)

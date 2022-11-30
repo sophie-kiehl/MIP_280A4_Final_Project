@@ -131,7 +131,7 @@ cutadapt \
    
    d. In total, 91.1% of base pairs passed filtering
 
-3. Push cutadapt log into GitHub repository
+4. Push cutadapt log into GitHub repository
 
 ```
 cd Quality_Control_and_Trimming
@@ -169,11 +169,8 @@ git commit -m "quality reports after trimming and filtering"
 git push origin main
 ```
 
+# COMPLETED THROUGH HERE
 3. Compare data before and after trimming
-
-    a. HOW MANY ILLUMINA READS CONTAINED ADAPTERS THAT WERE TRIMMED?
-
-    b. WHAT PERCENT OF READ PAIRS MADE IT THROUGH FILTERING?
     
     
 ## Step 6: Assemble Illumina reads

@@ -252,7 +252,7 @@ For example, the first contig in the Illumina only data is from line 1 to 27706 
 
 Subtract the line number between nodes to find the number of lines in each contig
 
-4. Find the contig length
+4. Find the contig length for the 12 longest contigs
 
 Subtract 1 from the number of lines in contig (to account for the header line) and then multiply by 60 (the number of bases on each line)
 
@@ -270,7 +270,7 @@ Subtract 1 from the number of lines in contig (to account for the header line) a
 | | | | 808 | 48420 | ? |
 | | | | 669 | 40080 | ? |
 | | | | 254 | 15180 | ? |
-| Illumina and Nanopore | 23 | 27705 | ? | ? |
+| Illumina and Nanopore | 24 | 23 | 27705 | ? | ? |
 | | | | 11756 | ? | ? |
 | | | | 7759 | ? | ? |
 | | | | 6470 | ? | ? |

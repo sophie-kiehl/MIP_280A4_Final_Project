@@ -251,36 +251,48 @@ ADD PUSH COMMAND
 
 ## Step 8: Compare assemblies
 
-| Assembly | Number of contigs | Number of scaffolds | Contig length | N50
+1. Find the number of contigs for each assembly
+
+```
+grep -c NODE ./paired_spades_assembly/contigs.fasta
+grep -c NODE ./paired_and_nanopore_spades_assembly/contigs.fasta
+```
+
+2. Find the number of scaffolds for each assembly
+
+```
+grep -c NODE ./paired_spades_assembly/scaffolds.fasta
+grep -c NODE ./paired_and_nanopore_spades_assembly/scaffolds.fsata
+```
+
+3. Find the number of lines in the 12 longest contigs for each assembly
+
+```
+grep -n NODE ./paired_spades_assembly/contigs.fasta
+grep -n NODE ./paired_and_nanopore_spades_assembly.fasta
+```
+
+Subtract the line number between nodes to find the number of lines in each contig
+
+4. Find the contig length
+
+Subtract 1 from the number of lines in contig (to account for the header line) and then multiply by 60 (the number of bases on each line)
+
+| Assembly | Number of contigs | Number of scaffolds | Lines in contig | Contig length | N50 |
 | --- | ---| --- | --- | --- |
-| Illumina only | 32 | 32? | 27706 | ? |
-| | | | 7554 | ? |
-| | | | 7301 | ? |
-| | | | 5775 | ? |
-| | | | 2910 | ? |
-| | | | 1636 | ? |
-| | | | 1507 | ? |
-| | | | 1089 | ? |
-| | | | 857 | ? |
-| | | | 808 | ? |
-| | | | 669 | ? |
-| | | | 254 | ? |
+| Illumina only | 32 | 32? | 27706 | 16662300 | ?|
+| | | | 7554 | 453180 | ? |
+| | | | 7301 | 438000 | ? |
+| | | | 5775 | 346440 | ? |
+| | | | 2910 | 174540 | ? |
+| | | | 1636 | 98100 | ? |
+| | | | 1507 | 90360 | ? |
+| | | | 1089 | 65280 | ? |
+| | | | 857 | 51360 | ? |
+| | | | 808 | 48420 | ? |
+| | | | 669 | 40080 | ? |
+| | | | 254 | 15180 | ? |
 
-1. Number of contigs
-
-    a. HOW MANY CONTIGS ARE IN EACH ASSEMBLY?
-
-2. Number of scaffolds
-
-    a. HOW MANY SCAFFOLDS ARE IN EACH ASSEMBLY?
-
-3. Contig lengths
-    
-    a. WHAT ARE THE LENGTHS OF THE 12 LONGEST CONTIGS OF EACH?
-    
-4. Contig stats
-
-    a. WHAT IS THE N50 FOR THE 12 LONGEST CONTIGS OF EACH?
     
 ## Step 9: BLAST contigs
 4. Extract the first contig

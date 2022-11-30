@@ -106,7 +106,7 @@ git push origin main
 which cutadapt
 ```
 
-2. Trim Universal adapters (as this was the most prevalent adapter according to the fastqc quality reports) and low-quality reads (Phred score beneath 30)
+2. Trim Universal adapters (as this was the most prevalent adapter according to the fastqc quality reports) and remove short (less than 80 bp) and low-quality reads (Phred score beneath 30)
 
 ```
 cutadapt \
@@ -114,19 +114,28 @@ cutadapt \
    -A AGATCGGAAGAG \
    -q 30,30 \
    --minimum-length 80 \
-   -o ~/MIP_280A4_Final_Project/Quality_Control_and_Trimming/Planococcus_Illumina_R1_trimmed.fastq \
-   -p ~/MIP_280A4_Final_Project/Quality_Control_and_Trimming/Planococcus_Illumina_R2_trimmed.fastq \
+   -o Planococcus_Illumina_R1_trimmed.fastq \
+   -p Planococcus_Illumina_R2_trimmed.fastq \
    Planococcus_Illumina_R1.fastq \
    Planococcus_Illumina_R2.fastq \
    | tee ~/MIP_280A4_Final_Project/Quality_Control_and_Trimming/cutadapt.log
 ```
 
-3. Push trimmed files into GitHub repository
+3. Examine how the trimming report
+
+   a. 33.4% of the forward reads and 31.0% of the reverse reads had adapter sequences trimmed
+   
+   b. 3.0% (25,586) of pairs were remove because they were too short
+   
+   c. 3.6% of basepairs were removed due to low quality (3,778,458 from the forward read and 11,304,148 from the reverse)
+   
+   d. In total, 91.1% of base pairs passed filtering
+
+3. Push cutadapt log into GitHub repository
 
 ```
 cd Quality_Control_and_Trimming
 
-git add Planococcus*trimmed.fastq
 git add cutadapt.log
 
 git commit -m "output of adapter trimming"
@@ -139,7 +148,9 @@ git push origin main
 1. Check trimmed Illumina quality
 
 ```
-fastqc DATA1_trimmed.fastq DATA2_trimmed.fastq
+cd ~/MIP_280A4_Final_Project
+
+fastqc Planococcus_Illumina_R1_trimmed.fastq Planococcus_Illumina_R2_trimmed.fastq
 ```
 
 2. Push quality report to GitHub repository

@@ -156,13 +156,13 @@ fastqc Planococcus_Illumina_R1_trimmed.fastq Planococcus_Illumina_R2_trimmed.fas
 2. Move quality report Quality Control direcotyr and push to GitHub repository
 
 ```
-mv Planococcus*trimmed_fastq.html ./Quality_Control_and_Trimming
-mv Plnaococcus*trimmed_fastq.zip ./Quality_Control_and_Trimming
+mv Planococcus*trimmed_fastqc.html ./Quality_Control_and_Trimming
+mv Plnaococcus*trimmed_fastqc.zip ./Quality_Control_and_Trimming
 
 cd Quality_Control_and_Trimming
 
-git add Planococcus*trimmed_fastq.html
-git add Planococcus*trimmed_fastq.zip
+git add Planococcus*trimmed_fastqc.html
+git add Planococcus*trimmed_fastqc.zip
 
 git commit -m "quality reports after trimming and filtering"
 

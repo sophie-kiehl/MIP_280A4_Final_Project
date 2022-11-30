@@ -10,7 +10,7 @@ It is written in [Markdown format](https://www.markdownguide.org/basic-syntax/).
 
 1. Clone GitHub repository
 ```
-git clone "url to starting files"
+git clone https://github.com/sophie-kiehl/MIP_280A4_Final_Project.git
 ```
 
 ## Step 2: Retrieve Illumina and Nanopore data files
@@ -28,12 +28,7 @@ cd /home/data_for_classes/2022_MIP_280A4/final_project_datasets
 ```
 cp Planococcus* ~/MIP_280A4_Final_Project
 
-cd ~/MIP_280A4_Final Project
-```
-3. Push Illumina and Nanopore fastq files into GitHub repository
-
-```
-ADD PUSH COMMAND
+cd ~/MIP_280A4_Final_Project
 ```
 
 ## Step 3: Quality check
@@ -62,10 +57,18 @@ fastqc Planococcus_Illumina_R1.fastq Planococcus_Illumina_R2.fastq
 fastqc Planococcus_Nanopore.fastq
 ```
 
-5. Push quality report into GitHub repository
+5. Push quality reports into GitHub repository
 
 ```
-ADD PUSH COMMAND 
+git add Planococcus*.html
+
+git config --global user.email "email address"
+git config --global user.name "name"
+git config http.postBuffer 524288000
+
+git commit -m "fastqc quality reports for Illumina and Nanopore"
+
+git push origin main
 ```
 
 ## Step 4: Clean Illumina data

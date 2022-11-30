@@ -68,8 +68,8 @@ Quality of read: https://htmlpreview.github.io/?https://github.com/sophie-kiehl/
 ```
 mkdir Quality_Control_and_Trimming
 
-mv ~/MIP_280A4_Final_Project/Planococcus*.html ~/MIP_280A4_Final_Project/Quality_Control_and_Trimming
-mv ~/MIP_280A4_Final_Project/Planococcus*.zip ~/MIP_280A4_Final_Project/Quality_Control_and_Trimming
+mv Planococcus*.html ./Quality_Control_and_Trimming
+mv Planococcus*.zip ./Quality_Control_and_Trimming
 ```
 
 6. Push quality reports into GitHub repository
@@ -153,10 +153,20 @@ cd ~/MIP_280A4_Final_Project
 fastqc Planococcus_Illumina_R1_trimmed.fastq Planococcus_Illumina_R2_trimmed.fastq
 ```
 
-2. Push quality report to GitHub repository
+2. Move quality report Quality Control direcotyr and push to GitHub repository
 
 ```
-ADD PUSH COMMAND
+mv Planococcus*trimmed_fastq.html ./Quality_Control_and_Trimming
+mv Plnaococcus*trimmed_fastq.zip ./Quality_Control_and_Trimming
+
+cd Quality_Control_and_Trimming
+
+git add Planococcus*trimmed_fastq.html
+git add Planococcus*trimmed_fastq.zip
+
+git commit -m "quality reports after trimming and filtering"
+
+git push origin main
 ```
 
 3. Compare data before and after trimming

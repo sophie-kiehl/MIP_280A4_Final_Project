@@ -114,8 +114,8 @@ cutadapt \
    -A AGATCGGAAGAG \
    -q 30,30 \
    --minimum-length 80 \
-   -o /Quality_Control_and_Trimming/Planococcus_Illumina_R1_trimmed.fastq \
-   -p /Quality_Control_and_Trimming/Planococcus_Illumina_R2_trimmed.fastq \
+   -o ~/MIP_280A4_Final_Project/Quality_Control_and_Trimming/Planococcus_Illumina_R1_trimmed.fastq \
+   -p ~/MIP_280A4_Final_Project/Quality_Control_and_Trimming/Planococcus_Illumina_R2_trimmed.fastq \
    Planococcus_Illumina_R1.fastq \
    Planococcus_Illumina_R2.fastq \
    | tee cutadapt.log

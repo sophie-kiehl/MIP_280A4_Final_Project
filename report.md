@@ -229,11 +229,7 @@ grep -n NODE contigs.fasta
 
 For example, the first contig is from line 1 to line 27706
 
-4. Extract the first contig
 
-```
-head -n 27706 contigs.fasta > contig_1.fasta
-```
 
 ## Step 7: Assemble Illumina and Nanopore reads
 
@@ -255,6 +251,21 @@ ADD PUSH COMMAND
 
 ## Step 8: Compare assemblies
 
+| Assembly | Number of contigs | Number of scaffolds | Contig length | N50
+| --- | ---| --- | --- | --- |
+| Illumina only | 32 | 32? | 27706 | ? |
+| | | | 7554 | ? |
+| | | | 7301 | ? |
+| | | | 5775 | ? |
+| | | | 2910 | ? |
+| | | | 1636 | ? |
+| | | | 1507 | ? |
+| | | | 1089 | ? |
+| | | | 857 | ? |
+| | | | 808 | ? |
+| | | | 669 | ? |
+| | | | 254 | ? |
+
 1. Number of contigs
 
     a. HOW MANY CONTIGS ARE IN EACH ASSEMBLY?
@@ -272,6 +283,11 @@ ADD PUSH COMMAND
     a. WHAT IS THE N50 FOR THE 12 LONGEST CONTIGS OF EACH?
     
 ## Step 9: BLAST contigs
+4. Extract the first contig
+
+```
+head -n 27706 contigs.fasta > contig_1.fasta
+```
 
 1. If there are a larger number of contigs, extract top 12 contigs from Illumina and Nanopore assembly
 

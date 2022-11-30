@@ -241,7 +241,7 @@ grep -c NODE ./paired_spades_assembly/scaffolds.fasta
 grep -c NODE ./paired_and_nanopore_spades_assembly/scaffolds.fasta
 ```
 
-3. Find the number of lines in the 12 longest contigs for each assembly
+Find the number of lines in the 12 longest contigs for each assembly
 
 ```
 grep -n NODE ./paired_spades_assembly/contigs.fasta
@@ -252,36 +252,20 @@ For example, the first contig in the Illumina only data is from line 1 to 27706 
 
 Subtract the line number between nodes to find the number of lines in each contig
 
-4. Find the contig length for the 12 longest contigs
+4. Condense contig reads onto single line
 
-Subtract 1 from the number of lines in contig (to account for the header line) and then multiply by 60 (the number of bases on each line)
+```
+seqtk seq -A contigs.fasta | head -24 > first_12_contigs.fasta
+```
 
-| Assembly | Number of contigs | Number of scaffolds | Lines in contig | Contig length | N50 |
-| --- | ---| --- | --- | --- | --- |
-| Illumina only | 32 | 30 | 27706 | 16662300 | ? |
-| | | | 7554 | 453180 | ? |
-| | | | 7301 | 438000 | ? |
-| | | | 5775 | 346440 | ? |
-| | | | 2910 | 174540 | ? |
-| | | | 1636 | 98100 | ? |
-| | | | 1507 | 90360 | ? |
-| | | | 1089 | 65280 | ? |
-| | | | 857 | 51360 | ? |
-| | | | 808 | 48420 | ? |
-| | | | 669 | 40080 | ? |
-| | | | 254 | 15180 | ? |
-| Illumina and Nanopore | 24 | 23 | 27705 | ? | ? |
-| | | | 11756 | ? | ? |
-| | | | 7759 | ? | ? |
-| | | | 6470 | ? | ? |
-| | | | 1556 | ? | ? |
-| | | | 1089 | ? | ? |
-| | | | 857 | ? | ? |
-| | | | 808 | ? | ? |
-| | | | 255 | ? | ? |
-| | | | 208 | ? | ? |
-| | | | 126 | ? | ? |
-| | | | 9 | ? | ? |
+5. Count the number of characters on read lines to find length of contigs
+
+
+
+| Assembly | Number of contigs | Number of scaffolds | N50 |
+| --- | ---| --- | --- |
+| Illumina only | 32 | 30 | ? |
+| Illumina and Nanopore | 24 | 23 | ? |
 
     
 ## Step 9: BLAST contigs

@@ -225,12 +225,6 @@ spades.py   -o paired_and_nanopore_spades_assembly \
    -m 24 -t 18
 ```
 
-2. Push assembly output to GitHub repository
-
-```
-ADD PUSH COMMAND
-```
-
 ## Step 8: Compare assemblies
 
 1. Find the number of contigs for each assembly
@@ -244,14 +238,14 @@ grep -c NODE ./paired_and_nanopore_spades_assembly/contigs.fasta
 
 ```
 grep -c NODE ./paired_spades_assembly/scaffolds.fasta
-grep -c NODE ./paired_and_nanopore_spades_assembly/scaffolds.fsata
+grep -c NODE ./paired_and_nanopore_spades_assembly/scaffolds.fasta
 ```
 
 3. Find the number of lines in the 12 longest contigs for each assembly
 
 ```
 grep -n NODE ./paired_spades_assembly/contigs.fasta
-grep -n NODE ./paired_and_nanopore_spades_assembly.fasta
+grep -n NODE ./paired_and_nanopore_spades_assembly/contigs.fasta
 ```
 
 For example, the first contig in the Illumina only data is from line 1 to 27706 (contig 2 begins on line 27707).
@@ -264,7 +258,7 @@ Subtract 1 from the number of lines in contig (to account for the header line) a
 
 | Assembly | Number of contigs | Number of scaffolds | Lines in contig | Contig length | N50 |
 | --- | ---| --- | --- | --- | --- |
-| Illumina only | 32 | 32? | 27706 | 16662300 | ?|
+| Illumina only | 32 | 30 | 27706 | 16662300 | ? |
 | | | | 7554 | 453180 | ? |
 | | | | 7301 | 438000 | ? |
 | | | | 5775 | 346440 | ? |
@@ -276,6 +270,18 @@ Subtract 1 from the number of lines in contig (to account for the header line) a
 | | | | 808 | 48420 | ? |
 | | | | 669 | 40080 | ? |
 | | | | 254 | 15180 | ? |
+| Illumina and Nanopore | 23 | 27705 | ? | ? |
+| | | | 11756 | ? | ? |
+| | | | 7759 | ? | ? |
+| | | | 6470 | ? | ? |
+| | | | 1556 | ? | ? |
+| | | | 1089 | ? | ? |
+| | | | 857 | ? | ? |
+| | | | 808 | ? | ? |
+| | | | 255 | ? | ? |
+| | | | 208 | ? | ? |
+| | | | 126 | ? | ? |
+| | | | 9 | ? | ? |
 
     
 ## Step 9: BLAST contigs

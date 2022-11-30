@@ -121,7 +121,7 @@ cutadapt \
    | tee ~/MIP_280A4_Final_Project/Quality_Control_and_Trimming/cutadapt.log
 ```
 
-3. Examine how the trimming report
+3. Examine the trimming report
 
    a. 33.4% of the forward reads and 31.0% of the reverse reads had adapter sequences trimmed
    

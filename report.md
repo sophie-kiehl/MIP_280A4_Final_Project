@@ -213,24 +213,6 @@ spades.py   -o paired_spades_assembly \
    -m 24 -t 18
 ```
 
-2. Find the number of contigs
-
-```
-cd paired_spades_assembly
-
-grep -c NODE contigs.fasta
-```
-
-3. Find the line number range of each contig
-
-```
-grep -n NODE contigs.fasta
-```
-
-For example, the first contig is from line 1 to line 27706
-
-
-
 ## Step 7: Assemble Illumina and Nanopore reads
 
 1. Create de novo assembly using SPAdes assembler (in conda environment)
@@ -272,6 +254,8 @@ grep -n NODE ./paired_spades_assembly/contigs.fasta
 grep -n NODE ./paired_and_nanopore_spades_assembly.fasta
 ```
 
+For example, the first contig in the Illumina only data is from line 1 to 27706 (contig 2 begins on line 27707).
+
 Subtract the line number between nodes to find the number of lines in each contig
 
 4. Find the contig length
@@ -279,7 +263,7 @@ Subtract the line number between nodes to find the number of lines in each conti
 Subtract 1 from the number of lines in contig (to account for the header line) and then multiply by 60 (the number of bases on each line)
 
 | Assembly | Number of contigs | Number of scaffolds | Lines in contig | Contig length | N50 |
-| --- | ---| --- | --- | --- |
+| --- | ---| --- | --- | --- | --- |
 | Illumina only | 32 | 32? | 27706 | 16662300 | ?|
 | | | | 7554 | 453180 | ? |
 | | | | 7301 | 438000 | ? |

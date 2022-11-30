@@ -213,16 +213,12 @@ spades.py   -o paired_spades_assembly \
    -m 24 -t 18
 ```
 
-2. Extract the 12 largest contigs
+2. Find the number of contigs
 
 ```
-seqtk seq -A contigs.fasta | head -24 > first_12_contigs.fasta
-```
+cd paired_spades_assembly
 
-2. Push assembly output to GitHub repository
-
-```
-ADD PUSH COMMAND
+grep -c NODE contigs.fasta
 ```
 
 ## Step 7: Assemble Illumina and Nanopore reads

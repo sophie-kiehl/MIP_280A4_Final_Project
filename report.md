@@ -55,11 +55,23 @@ fastqc Planococcus_Illumina_R1.fastq Planococcus_Illumina_R2.fastq
 
 ```
 fastqc Planococcus_Nanopore.fastq
-```
-
-5. Push quality reports into GitHub repository
 
 ```
+
+5. Create directory to deposit output of fastqc
+
+```
+mkdir Quality_Control_and_Trimming
+
+mv ~/MIP_280A4_Final_Project/Planococcus*.html ~/MIP_280A4_Final_Project/Quality_Control_and_Trimming
+mv ~/MIP_280A4_Final_Project/Planococcus*.zip ~/MIP_280A4_Final_Project/Quality_Control_and_Trimming
+```
+
+6. Push quality reports into GitHub repository
+
+```
+cd Quality_Control_and_Trimming
+
 git add Planococcus*.html
 
 git config --global user.email "email address"
@@ -71,7 +83,7 @@ git commit -m "fastqc quality reports for Illumina and Nanopore"
 git push origin main
 ```
 
-6. Push compressed raw NGS data into GitHub repository
+7. Push compressed raw NGS data into GitHub repository
 
 ```
 git add Planococcus*.zip
@@ -97,10 +109,10 @@ cutadapt \
    -A CTGTCTCTTATACACATCT \
    -q 30,30 \
    --minimum-length 80 \
-   -o DATA1_trimmed.fastq \
-   -p DATA2_trimmed.fastq \
-   DATA1.fastq \
-   DATA2.fastq \
+   -o /Quality_Control_and_Trimming/Planococcus_Illumina_R1_trimmed.fastq \
+   -p /Quality_Control_and_Trimming/Planococcus_Illumina_R2_trimmed.fastq \
+   Planococcus_Illumina_R1.fastq \
+   Planococcus_Illumina_R2.fastq \
    | tee cutadapt.log
 ```
 

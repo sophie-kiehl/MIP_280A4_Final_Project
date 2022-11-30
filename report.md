@@ -213,6 +213,12 @@ spades.py   -o paired_spades_assembly \
    -m 24 -t 18
 ```
 
+2. Extract the 12 largest contigs
+
+```
+seqtk seq -A contigs.fasta | head -24 > first_12_contigs.fasta
+```
+
 2. Push assembly output to GitHub repository
 
 ```

@@ -118,13 +118,20 @@ cutadapt \
    -p ~/MIP_280A4_Final_Project/Quality_Control_and_Trimming/Planococcus_Illumina_R2_trimmed.fastq \
    Planococcus_Illumina_R1.fastq \
    Planococcus_Illumina_R2.fastq \
-   | tee cutadapt.log
+   | tee ~/MIP_280A4_Final_Project/Quality_Control_and_Trimming/cutadapt.log
 ```
 
 3. Push trimmed files into GitHub repository
 
 ```
-ADD PUSH COMMAND
+cd Quality_Control_and_Trimming
+
+git add Planococcus*trimmed.fastq
+git add cutadapt.log
+
+git commit -m "output of adapter trimming"
+
+git push origin main
 ```
 
 ## Step 5: Quality recheck

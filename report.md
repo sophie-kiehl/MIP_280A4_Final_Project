@@ -53,7 +53,19 @@ fastqc Planococcus_Illumina_R1.fastq Planococcus_Illumina_R2.fastq
 
 Quality of first read: https://htmlpreview.github.io/?https://github.com/sophie-kiehl/MIP_280A4_Final_Project/blob/main/Quality_Control_and_Trimming/Planococcus_Illumina_R1_fastqc.html
 
+There were 844,025 forward reads in total. There was slightly abnormal distribution of GC content and, as expected, some of the reads included adapters, specifically the Illumina Universal adapter.
+
+<img width="859" alt="Warning on GC content distribution" src="https://user-images.githubusercontent.com/115187825/204867185-162de0b7-be05-4682-997c-9ac33bda156c.png">
+
+<img width="901" alt="Warning on adapter content" src="https://user-images.githubusercontent.com/115187825/204867226-96286b9e-dc13-4ff2-9071-8546ec001c7a.png">
+
 Quality of second read: https://htmlpreview.github.io/?https://github.com/sophie-kiehl/MIP_280A4_Final_Project/blob/main/Quality_Control_and_Trimming/Planococcus_Illumina_R2_fastqc.html
+
+There were 844,025 reverse reads in total. In addition to an abnormal GC content distribution and the presence of adapters, the reverse reads also showed warnings on per base sequence quality and on per base sequence content.
+
+<img width="930" alt="Warning on per base sequence quality" src="https://user-images.githubusercontent.com/115187825/204868491-bb77b74f-e0ea-4031-853b-4e8530cc48ed.png">
+
+<img width="929" alt="Warning on per base sequence content" src="https://user-images.githubusercontent.com/115187825/204868512-1d4b0f77-ca93-46c1-9c40-ec84edb06377.png">
 
 4. Check quality of Nanopore data
 
@@ -169,8 +181,17 @@ git commit -m "quality reports after trimming and filtering"
 git push origin main
 ```
 
-# COMPLETED THROUGH HERE
 3. Compare data before and after trimming
+
+Quality of first read: https://htmlpreview.github.io/?https://github.com/sophie-kiehl/MIP_280A4_Final_Project/blob/main/Quality_Control_and_Trimming/Planococcus_Illumina_R1_trimmed_fastqc.html
+
+There were 818,438 reads in total. All of the adapter content was successfully removed. The abnormal GC content distribution remained. Additionally, this quality report showed a warning on sequence length distribution that was not present on the report pre-filtering.
+
+<img width="853" alt="Warning on sequence lenght distribution" src="https://user-images.githubusercontent.com/115187825/204867695-9fc99918-1636-4569-a069-8fd1b5fe855f.png">
+
+Quality of second read: https://htmlpreview.github.io/?https://github.com/sophie-kiehl/MIP_280A4_Final_Project/blob/main/Quality_Control_and_Trimming/Planococcus_Illumina_R2_trimmed_fastqc.html
+
+There were 818,439 reverse reads after trimming. Otherwise, the results from this were the same as the results for trimming the R1 reads.
     
     
 ## Step 6: Assemble Illumina reads

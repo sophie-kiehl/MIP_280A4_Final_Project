@@ -283,3 +283,9 @@ ADD EXTRACT COMMAND
 
 ## Step 10: Genome alignment
 
+1. Build an index
+
+```
+bowtie2-build ./paired_and_nanopore_spades_assembly/scaffolds.fasta Illumina_and_nanopore_index
+```
+

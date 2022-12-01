@@ -315,3 +315,9 @@ samtools view -b Illumina_reads_mapped_to_scaffolds.sam > Illumina_reads_mapped_
 ```
 samtools sort -T tmp -O 'bam' Illumina_reads_mapped_to_scaffolds.bam  > Illumina_reads_mapped_to_scaffolds.sorted.bam
 ```
+
+5. Use samtools to find the average coverage of the Illumina reads to the Illumina and Nanopore scaffolds
+
+```
+samtools depth Illumina_reads_mapped_to_scaffolds.sorted.bam
+```

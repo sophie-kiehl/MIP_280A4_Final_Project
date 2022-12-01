@@ -220,6 +220,11 @@ spades.py   -o paired_and_nanopore_spades_assembly \
 grep -c NODE ./paired_spades_assembly/contigs.fasta
 grep -c NODE ./paired_and_nanopore_spades_assembly/contigs.fasta
 ```
+2.
+```
+./quast.py ./paired_spades_assembly/contigs.fasta
+        -o Illumina_contigs_quast_test_output
+```
 
 2. Find the number of scaffolds for each assembly
 

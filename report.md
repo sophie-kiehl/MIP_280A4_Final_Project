@@ -292,7 +292,7 @@ bowtie2-build ./paired_and_nanopore_spades_assembly/scaffolds.fasta Illumina_and
 2. Align the reads to the scaffolds
 
 ```
-bowtie2 -x Illumina_and_Nanopore_index \
+bowtie2 -x Illumina_and_nanopore_index \
    -1 Planococcus_Illumina_R1_trimmed.fastq \
    -2 Planococcus_Illumina_R2_trimmed.fastq \
    --no-unal \

@@ -18,7 +18,6 @@ git clone https://github.com/sophie-kiehl/MIP_280A4_Final_Project.git
 1. Enter thoth server and navigate to directory where data files are stored
 
 ```
-
 cd /home/data_for_classes/2022_MIP_280A4/final_project_datasets
 ```
 

@@ -222,6 +222,8 @@ grep -c NODE ./paired_and_nanopore_spades_assembly/contigs.fasta
 ```
 2. Find the N50 values of the assembly data
 ```
+conda install -c bioconda quast
+
 ./quast.py ./paired_spades_assembly/contigs.fasta \
         -o Illumina_contigs_quast_test_output
 ```

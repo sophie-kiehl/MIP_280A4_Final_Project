@@ -68,9 +68,9 @@ Quality of read: https://htmlpreview.github.io/?https://github.com/sophie-kiehl/
 
 There were 6045 reads. The quality report showed errors on per base sequence quality, per sequence quality scores, per base sequence content, and per sequence GC content and a warning on sequence length distribution. This is not unexepcted quality for Nanopore reads.
 
-<img width="872" alt="Error on per base sequence quality" src="https://user-images.githubusercontent.com/115187825/204870502-4722776d-fd0f-4b58-bd48-2d83244f3881.png">
+<img width="1011" alt="Screen Shot 2022-12-01 at 10 30 25 AM" src="https://user-images.githubusercontent.com/115187825/205124505-2597736f-c0d3-4a7c-bf20-bfc8527236cc.png">
 
-<img width="871" alt="Error on per base sequence content" src="https://user-images.githubusercontent.com/115187825/204870613-8cea2ba2-f858-4122-8ff0-16ba00cf80f8.png">
+<img width="1015" alt="Screen Shot 2022-12-01 at 10 30 37 AM" src="https://user-images.githubusercontent.com/115187825/205124555-ef5b07ec-5ffc-4240-8c79-16f3ded3981c.png">
 
 
 4. Create directory to deposit output of fastqc

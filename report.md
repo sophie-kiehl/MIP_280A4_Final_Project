@@ -18,7 +18,6 @@ git clone https://github.com/sophie-kiehl/MIP_280A4_Final_Project.git
 1. Enter thoth server and navigate to directory where data files are stored
 
 ```
-ssh skiehl@thoth01.cvmbs.colostate.edu
 
 cd /home/data_for_classes/2022_MIP_280A4/final_project_datasets
 ```
@@ -39,13 +38,7 @@ cd ~/MIP_280A4_Final_Project
 conda activate bio_tools
 ```
 
-2. Check version of fastqc
-
-```
-which fastqc
-```
-
-3. Check quality of paired-end Illumina data
+2. Check quality of paired-end Illumina data
 
 ```
 fastqc Planococcus_Illumina_R1.fastq Planococcus_Illumina_R2.fastq
@@ -67,7 +60,7 @@ There were 844,025 reverse reads in total. In addition to an abnormal GC content
 
 <img width="929" alt="Warning on per base sequence content" src="https://user-images.githubusercontent.com/115187825/204868512-1d4b0f77-ca93-46c1-9c40-ec84edb06377.png">
 
-4. Check quality of Nanopore data
+3. Check quality of Nanopore data
 
 ```
 fastqc Planococcus_Nanopore.fastq
@@ -83,7 +76,7 @@ on.
 <img width="871" alt="Error on per base sequence content" src="https://user-images.githubusercontent.com/115187825/204870613-8cea2ba2-f858-4122-8ff0-16ba00cf80f8.png">
 
 
-5. Create directory to deposit output of fastqc
+4. Create directory to deposit output of fastqc
 
 ```
 mkdir Quality_Control_and_Trimming
@@ -92,7 +85,7 @@ mv Planococcus*.html ./Quality_Control_and_Trimming
 mv Planococcus*.zip ./Quality_Control_and_Trimming
 ```
 
-6. Push quality reports into GitHub repository
+5. Push quality reports into GitHub repository
 
 ```
 cd Quality_Control_and_Trimming
@@ -108,7 +101,7 @@ git commit -m "fastqc quality reports for Illumina and Nanopore"
 git push origin main
 ```
 
-7. Push compressed raw NGS data into GitHub repository
+6. Push compressed raw NGS data into GitHub repository
 
 ```
 git add Planococcus*.zip
@@ -120,13 +113,7 @@ git push origin main
 
 ## Step 4: Clean Illumina data
 
-1. Check version of cutadapt
-
-```
-which cutadapt
-```
-
-2. Trim Universal adapters (as this was the most prevalent adapter according to the fastqc quality reports) and remove short (less than 80 bp) and low-quality reads (Phred score beneath 30)
+1. Trim Universal adapters (as this was the most prevalent adapter according to the fastqc quality reports) and remove short (less than 80 bp) and low-quality reads (Phred score beneath 30)
 
 ```
 cutadapt \
@@ -141,7 +128,7 @@ cutadapt \
    | tee ~/MIP_280A4_Final_Project/Quality_Control_and_Trimming/cutadapt.log
 ```
 
-3. Examine the trimming report
+2. Examine the trimming report
 
    a. 33.4% of the forward reads and 31.0% of the reverse reads had adapter sequences trimmed
    
@@ -151,7 +138,7 @@ cutadapt \
    
    d. In total, 91.1% of base pairs passed filtering
 
-4. Push cutadapt log into GitHub repository
+3. Push cutadapt log into GitHub repository
 
 ```
 cd Quality_Control_and_Trimming
@@ -244,16 +231,29 @@ grep -c NODE ./paired_and_nanopore_spades_assembly/scaffolds.fasta
 3. Find the length of the 12 longest contigs for each assembly
 
 ```
-grep NODE ./paired_spades_assembly/contigs.fasta
-grep NODE ./paired_and_nanopore_spades_assembly/contigs.fasta
+grep NODE ./paired_spades_assembly/contigs.fasta | head -12
+grep NODE ./paired_and_nanopore_spades_assembly/contigs.fasta | head -12
 ```
-The length of each contig is in the header
+The length of each contig is in the header of each node
 
-
-| Assembly | Number of contigs | Number of scaffolds | N50 |
-| --- | ---| --- | --- |
-| Illumina only | 32 | 30 | ? |
-| Illumina and Nanopore | 24 | 23 | ? |
+| | Illumina only | Illumina and Nanopore |
+| --- | --- | --- |
+| Number of contigs | 32 | 24 |
+| N50 of contigs | ? | ? |
+| Number of scaffolds | 30 | 23 |
+| N50 of scaffolds | ? | ? |
+| Contig 1 length | 1662249 | 1662206 |
+| Contig 2 length | 453155 | 716081 |
+| Contig 3 length | 437964 | 454644 |
+| Contig 4 length | 346434 | 388083 |
+| Contig 5 length | 174533 | 93258 |
+| Contig 6 length | 98084 | 65255 |
+| Contig 7 length | 90319 | 51313 |
+| Contig 8 length | 65255 | 48414 |
+| Contig 9 length | 51313 | 15214 |
+| Contig 10 length | 48414 | 12386 |
+| Contig 11 length | 40031 | 7491 |
+| Contig 12 length | 15155 | 429 |
 
     
 ## Step 9: BLAST contigs

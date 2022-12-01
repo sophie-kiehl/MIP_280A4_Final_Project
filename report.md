@@ -240,24 +240,22 @@ grep NODE ./paired_and_nanopore_spades_assembly/contigs.fasta | head -12
 ```
 The length of each contig is in the header of each node
 
-| | Illumina only | Illumina and Nanopore |
-| --- | --- | --- |
-| Number of contigs | 32 | 24 |
-| N50 of contigs | ? | ? |
-| Number of scaffolds | 30 | 23 |
-| N50 of scaffolds | ? | ? |
-| Contig 1 length | 1662249 | 1662206 |
-| Contig 2 length | 453155 | 716081 |
-| Contig 3 length | 437964 | 454644 |
-| Contig 4 length | 346434 | 388083 |
-| Contig 5 length | 174533 | 93258 |
-| Contig 6 length | 98084 | 65255 |
-| Contig 7 length | 90319 | 51313 |
-| Contig 8 length | 65255 | 48414 |
-| Contig 9 length | 51313 | 15214 |
-| Contig 10 length | 48414 | 12386 |
-| Contig 11 length | 40031 | 7491 |
-| Contig 12 length | 15155 | 429 |
+| | Illumina only contigs | Illumina and Nanopore contigs | Illumina only scaffolds | Illumina and Nanopore scaffolds |
+| --- | --- | --- | --- | --- |
+| Number | 32 | 24 | 30 | 23 |
+| N50 | 453155 | ? | ? | ? |
+| 1 length | 1662249 | 1662206 | ? | ? |
+| 2 length | 453155 | 716081 | ? | ? |
+| 3 length | 437964 | 454644 | ? | ? |
+| 4 length | 346434 | 388083 | ? | ? |
+| 5 length | 174533 | 93258 | ? | ? |
+| 6 length | 98084 | 65255 | ? | ? |
+| 7 length | 90319 | 51313 | ? | ? |
+| 8 length | 65255 | 48414 | ? | ? |
+| 9 length | 51313 | 15214 | ? | ? |
+| 10 length | 48414 | 12386 | ? | ? |
+| 11 length | 40031 | 7491 | ? | ? |
+| 12 length | 15155 | 429 | ? | ? |
 
     
 ## Step 9: BLAST contigs

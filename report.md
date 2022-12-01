@@ -252,7 +252,7 @@ The length of each contig is in the header of each node
 | | Illumina only contigs | Illumina and Nanopore contigs | Illumina only scaffolds | Illumina and Nanopore scaffolds |
 | --- | --- | --- | --- | --- |
 | Number | 32 | 24 | 30 | 23 |
-| N50 | 453155 | 716081 | 454155 | 716081 |
+| N50 | 453155 | 716081 | 453155 | 716081 |
 | 1 length | 1662249 | 1662206 | 1662249 | 1662206 |
 | 2 length | 453155 | 716081 | 453155 | 716081 |
 | 3 length | 437964 | 454644 | 437964 | 548070 |

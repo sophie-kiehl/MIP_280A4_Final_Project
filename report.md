@@ -38,12 +38,11 @@ conda activate bio_tools
 ```
 
 2. Check quality of paired-end Illumina data
-
 ```
 fastqc Planococcus_Illumina_R1.fastq Planococcus_Illumina_R2.fastq
 ```
 
-Quality of first read: https://htmlpreview.github.io/?https://github.com/sophie-kiehl/MIP_280A4_Final_Project/blob/main/Quality_Control_and_Trimming/Planococcus_Illumina_R1_fastqc.html
+Quality of first read: https://htmlpreview.github.io/?https://github.com/sophie-kiehl/MIP_280A4_Final_Project/blob/main/Quality_Control_and_Trimming/Planococcus_Nanopore_fastqc.html
 
 There were 844,025 forward reads in total. There was slightly abnormal distribution of GC content and, as expected, some of the reads included adapters, specifically the Illumina Universal adapter.
 
@@ -62,7 +61,7 @@ There were 844,025 reverse reads in total. In addition to an abnormal GC content
 3. Check quality of Nanopore data
 
 ```
-fastqc Planococcus_Nanopore.fastq
+fastqc -t 24 Planococcus_Nanopore.fastq
 ```
 
 Quality of read: https://htmlpreview.github.io/?https://github.com/sophie-kiehl/MIP_280A4_Final_Project/blob/main/Quality_Control_and_Trimming/Planococcus_Nanopore_fastqc.html

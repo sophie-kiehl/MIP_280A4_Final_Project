@@ -305,3 +305,9 @@ bowtie2 -x Illumina_and_nanopore_index \
    -S Illumina_reads_mapped_to_scaffolds.sam
 ```
 
+3. Conver the same file to a bam file
+
+```
+samtools view -b Illumina_reads_mapped_to_scaffolds.sam > Illumina_reads_mapped_to_scaffolds.bam
+```
+

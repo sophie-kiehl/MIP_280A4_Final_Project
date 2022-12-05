@@ -258,23 +258,19 @@ The length of each is in the header of each node
 
     
 ## Step 9: BLAST contigs
-4. Extract the first contig
+1. Extract the first twelve contig
 
 ```
-head -n 27706 contigs.fasta > contig_1.fasta
+seqtk seq -A contigs.fasta | head -24 > first_12_contigs.fasta
 ```
 
-1. If there are a larger number of contigs, extract top 12 contigs from Illumina and Nanopore assembly
+2. Open first_12_contigs.fasta in a plain text editor (such as BBEdit)
 
-```
-ADD EXTRACT COMMAND
-```
+3. Go to https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
 
-2. Go to https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
+4. Record search parameters
 
-3. Record search parameters
-
-4. Record top 5 hits and percent identity for each of the first 12 contigs
+5. Record top 5 hits and percent identity for each of the first 12 contigs
 
 ## Step 10: Genome alignment
 

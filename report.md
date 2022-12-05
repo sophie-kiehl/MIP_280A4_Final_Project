@@ -228,7 +228,7 @@ quast.py ./paired_and_nanopore_spades_assembly/contigs.fasta \
         -o Illumina_and_nanopore_scaffolds_quast_test_output
 ```
 
-3. Find the length of the 12 longest contigs for each assembly
+3. Find the length of the 12 longest contigs and scaffolds for each assembly
 
 ```
 grep NODE ./paired_spades_assembly/contigs.fasta | head -12
@@ -237,24 +237,24 @@ grep NODE ./paired_and_nanopore_spades_assembly/contigs.fasta | head -12
 grep NODE ./paired_spades_assembly/scaffolds.fasta | head -12
 grep NODE ./paired_and_nanopore_spades_assembly/scaffolds.fasta | head -12
 ```
-The length of each contig is in the header of each node
+The length of each is in the header of each node
 
 | | Illumina only contigs | Illumina and Nanopore contigs | Illumina only scaffolds | Illumina and Nanopore scaffolds |
 | --- | --- | --- | --- | --- |
 | Number | 32 | 12 | 30 | 11 |
 | N50 | 453155 | 1073186 | 453155 | 1073186 |
-| 1 length | 1662249 | 1662206 | 1662249 | 1662206 |
-| 2 length | 453155 | 716081 | 453155 | 716081 |
-| 3 length | 437964 | 454644 | 437964 | 548070 |
-| 4 length | 346434 | 388083 | 386565 | 388083 |
-| 5 length | 174533 | 93258 | 174533 | 65255 |
-| 6 length | 98084 | 65255 | 98084 | 51313 |
-| 7 length | 90319 | 51313 | 90319 | 48414 |
-| 8 length | 65255 | 48414 | 65255 | 15214 |
-| 9 length | 51313 | 15214 | 51313 | 12386 |
-| 10 length | 48414 | 12386 | 48414 | 7491 |
-| 11 length | 40031 | 7491 | 15155 | 429 |
-| 12 length | 15155 | 429 | 12386 | 419 |
+| 1 length | 1662249 | 1447436 | 1662249 | 1662206 |
+| 2 length | 453155 | 1073186 | 453155 | 716081 |
+| 3 length | 437964 | 718909 | 437964 | 548070 |
+| 4 length | 346434 | 234788 | 386565 | 388083 |
+| 5 length | 174533 | 48414 | 174533 | 65255 |
+| 6 length | 98084 | 12386 | 98084 | 51313 |
+| 7 length | 90319 | 7491 | 90319 | 48414 |
+| 8 length | 65255 | 400 | 65255 | 15214 |
+| 9 length | 51313 | 399 | 51313 | 12386 |
+| 10 length | 48414 | 383 | 48414 | 7491 |
+| 11 length | 40031 | 186 | 15155 | 429 |
+| 12 length | 15155 | 128 | 12386 | 419 |
 
     
 ## Step 9: BLAST contigs

@@ -286,6 +286,27 @@ get fist_12_scaffolds_fasta
 
 6. Record top 5 hits and percent identity for each of the first 12 contigs
 
+| Scaffold (run) | 1 | % | 2 | % | 3 | % | 4 | % | 5 | % |
+| --- | ---| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 (1) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 1 (2) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 1 (3) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 1 (4) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 1 (5) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 2 (1) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 2 (2) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 2 (3) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 2 (4) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 2 (5) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 3 (1) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 3 (2) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 3 (3) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 3 (4) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 3 (5) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 4 Description Graphics | Planococcus maritimus strain XJ11 plasmid unnamed 1 |  | ? | ? | ? | ? | ? | ? | ? | ? |
+| 5 Description Graphics | Planococcus citreus plasmid pNM11 | 95.35 | Planococcus sp. strain ANT_H26 plasmid pA26H2 | 94.69 | Planococcus sp. MB-3u-03 plasmid unnamed 4 | 94.60 | ? | 89.80 | ? | 89.80 |
+| 6 Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+
 ## Step 10: Genome alignment
 
 1. Build an index

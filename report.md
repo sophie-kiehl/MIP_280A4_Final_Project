@@ -258,10 +258,12 @@ The length of each is in the header of each node
 
     
 ## Step 9: BLAST contigs
-1. Extract the first twelve contig
+1. Extract the first twelve scaffolds from the Illumina and Nanopore assembly
 
 ```
-seqtk seq -A contigs.fasta | head -24 > first_12_contigs.fasta
+cd paired_and_nanopore_spades_assembly
+
+seqtk seq -A scaffolds.fasta | head -24 > first_12_scaffolds.fasta
 ```
 
 2. Open first_12_contigs.fasta in a plain text editor (such as BBEdit)

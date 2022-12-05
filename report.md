@@ -195,7 +195,7 @@ spades.py   -o paired_spades_assembly \
 spades.py   -o paired_and_nanopore_spades_assembly \
    --pe1-1 Planococcus_Illumina_R1_trimmed.fastq \
    --pe1-2 Planococcus_Illumina_R2_trimmed.fastq \
-   --nanopore Planococcus_Nanopore.fastq \
+   --nanopore Planococcus_Nanopore.fastq.gz \
    -m 24 -t 18
 ```
 

@@ -266,13 +266,25 @@ cd paired_and_nanopore_spades_assembly
 seqtk seq -A scaffolds.fasta | head -24 > first_12_scaffolds.fasta
 ```
 
-2. Open first_12_contigs.fasta in a plain text editor (such as BBEdit)
+2. Retrive the first_12_scaffolds.fasta file from the server
 
-3. Go to https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
+Open a new terminal window and enter the directory you would like to place the file in
 
-4. Record search parameters
+```
+sftp "thoth username"
 
-5. Record top 5 hits and percent identity for each of the first 12 contigs
+cd MIP_280A4_Final_Project/paired_and_nanopore_spades_assembly
+
+get fist_12_scaffolds_fasta
+```
+
+3. Open first_12_contigs.fasta in a plain text editor (such as BBEdit)
+
+4. Go to https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome
+
+5. Record search parameters
+
+6. Record top 5 hits and percent identity for each of the first 12 contigs
 
 ## Step 10: Genome alignment
 

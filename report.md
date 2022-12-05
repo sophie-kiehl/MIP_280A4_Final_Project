@@ -61,7 +61,7 @@ There were 844,025 reverse reads in total. In addition to an abnormal GC content
 3. Check quality of Nanopore data
 
 ```
-fastqc -t 24 Planococcus_Nanopore.fastq
+fastqc -t 24 Planococcus_Nanopore.fastq.gz
 ```
 
 Quality of read: https://htmlpreview.github.io/?https://github.com/sophie-kiehl/MIP_280A4_Final_Project/blob/main/Quality_Control_and_Trimming/Planococcus_Nanopore_fastqc.html
@@ -94,16 +94,6 @@ git config --global user.name "name"
 git config http.postBuffer 524288000
 
 git commit -m "fastqc quality reports for Illumina and Nanopore"
-
-git push origin main
-```
-
-6. Push compressed raw NGS data into GitHub repository
-
-```
-git add Planococcus*.zip
-
-git commit -m "compressed raw NGS data (Illumina and Nanopore)"
 
 git push origin main
 ```

@@ -275,7 +275,7 @@ sftp "thoth username"
 
 cd MIP_280A4_Final_Project/paired_and_nanopore_spades_assembly
 
-get fist_12_scaffolds_fasta
+get first_12_scaffolds_fasta
 ```
 
 3. Open first_12_contigs.fasta in a plain text editor (such as BBEdit)

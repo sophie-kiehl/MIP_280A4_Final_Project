@@ -429,3 +429,25 @@ samtools depth Nanopore_reads_mapped_to_scaffolds.sorted.bam > Nanopore_reads_ma
 ```
 
 6. Record results
+
+PROBLEM: SAME, JUST WITH NANOPORE
+
+## Step 12: Annotation of assembly
+
+1. Install bakta
+
+```
+conda install -c conda-forge -c bioconda bakta
+```
+
+2. Annotate assembly
+
+```
+bakta --db /home/data_for_classes/bakta_database/db ./paired_and_nanopore_spades_assembly/scaffolds.fasta
+```
+
+3. Run amrfinder
+
+```
+amrfinder_update --database /home/data_for_classes/bakta_database/db/amrfinderplus-db 
+```

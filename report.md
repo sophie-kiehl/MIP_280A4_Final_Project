@@ -293,7 +293,7 @@ get first_12_scaffolds_fasta
 | 1 (3) Description Graphics | Planococcus rifietoensis chr | 96.79 | Planococcus plakortidis chr | 92.38 | Planococcus sp. chr | 95.20 | Planococcus maritimus chr | 88.68 | Planococcus kocurii chr | 80.0 |
 | 2 (1) Description Graphics | Planococcus rifietoensis chr | 94.86 | Planococcus sp. | 89.28 | Planococcus maritimus chr | 90.76 | Planococcus plakortidis chr | 91.50 | Planococcus glaciei chr | 76.68 |
 | 2 (2) Description Graphics | Planococcus sp. chr | 92.04 | Planococcus rifietoensis chr | 93.41 | Planococcus maritimus chr | 89.68 | Planococcus plakortidis chr | 88.94 | Planococcus maritimus chr | 86.04 |
-| 2 (3) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 2 (3) Description Graphics | Planococcus rifietoensis chr | 88.72 | Planococcus plakortidis chr| 96.03 | Planococcus sp. chr | 91.29 | Planococcus maritimus chr | 86.11 | Planococcus maritmus chr | 80.20 |
 | 3 (1) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
 | 3 (2) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
 | 3 (3) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |

@@ -432,7 +432,7 @@ samtools sort -T tmp -O 'bam' Nanopore_reads_mapped_to_scaffolds.bam  > Nanopore
 samtools coverage Nanopore_reads_mapped_to_scaffolds.sorted.bam > Nanopore_reads_mapped_to_scaffolds_coverage.txt
 ```
 
-6. Compare coverage between 
+6. Compare coverage between Illumina and Nanopore reads
 
 ```
 less Illumina_reads_mapped_to_scaffolds_coverage.txt

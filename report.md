@@ -394,14 +394,6 @@ samtools sort -T tmp -O 'bam' Illumina_reads_mapped_to_scaffolds.bam  > Illumina
 samtools coverage Illumina_reads_mapped_to_scaffolds.sorted.bam > Illumina_reads_mapped_to_scaffolds_coverage.txt
 ```
 
-7. Record results
-
-```
-less Illumina_reads_mapped_to_scaffolds_coverage.txt
-```
-
-
-
 ## Step 11: Nanopore reads coverage of assembly
 
 1. Install minimap

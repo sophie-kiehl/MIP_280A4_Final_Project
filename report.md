@@ -295,7 +295,7 @@ get first_12_scaffolds_fasta
 | 2 (2) Description Graphics | Planococcus sp. chr | 92.04 | Planococcus rifietoensis chr | 93.41 | Planococcus maritimus chr | 89.68 | Planococcus plakortidis chr | 88.94 | Planococcus maritimus chr | 86.04 |
 | 2 (3) Description Graphics | Planococcus rifietoensis chr | 88.72 | Planococcus plakortidis chr| 96.03 | Planococcus sp. chr | 91.29 | Planococcus maritimus chr | 86.11 | Planococcus maritmus chr | 80.20 |
 | 3 (1) Description Graphics | Planococcus rifietoensis chr | 90.37 | Planococcus sp. chr | 90.39 | Planococcus plakortidis chr | 89.07 | Planococcus maritimus chr | 85.77 | Planococcus maritimus chr | 84.55 |
-| 3 (2) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 3 (2) Description Graphics | Planococcus rifietoensis chr | 93.54 | Planococcus sp. chr | 93.69 | Planococcus maritimus chr | 89.31 | Planococcus plakortidis chr | 89.48 | Planococcus maritimus chr | 92.01 |
 | 3 (3) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
 | 4 Description Graphics | Planococcus maritimus plasmid | 90.35 | Planococcus sp. plasmid | 92.25 | Planococcus faecalis chr | 90.86 | Planococcus maritimus chr | 94.17 | Planococcus antarcticus | 92.90 |
 | 5 [Description](https://github.com/sophie-kiehl/MIP_280A4_Final_Project/blob/main/BLAST_results/5_Description.png) [Graphics](https://github.com/sophie-kiehl/MIP_280A4_Final_Project/blob/main/BLAST_results/5_Graphics.png) | Planococcus citreus plasmid | 95.35 | Planococcus sp. plasmid  | 94.69 | Planococcus sp. plasmid | 94.60 | Staphylococcus sciuri plasmid | 89.80 | Mammaliicoccus sciuri plasmid | 89.80 |

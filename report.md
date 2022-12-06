@@ -275,7 +275,7 @@ sftp "thoth username"
 
 cd MIP_280A4_Final_Project/paired_and_nanopore_spades_assembly
 
-get fist_12_scaffolds_fasta
+get first_12_scaffolds_fasta
 ```
 
 3. Open first_12_contigs.fasta in a plain text editor (such as BBEdit)
@@ -285,6 +285,27 @@ get fist_12_scaffolds_fasta
 5. Record search parameters
 
 6. Record top 5 hits and percent identity for each of the first 12 contigs
+
+| Scaffold (run) | 1 | % | 2 | % | 3 | % | 4 | % | 5 | % |
+| --- | ---| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 (1) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 1 (2) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 1 (3) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 1 (4) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 1 (5) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 2 (1) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 2 (2) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 2 (3) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 2 (4) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 2 (5) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 3 (1) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 3 (2) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 3 (3) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 3 (4) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 3 (5) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 4 Description Graphics | Planococcus maritimus plasmid | 90.35 | Planococcus sp. plasmid | 92.25 | Planococcus faecalis chr | 90.86 | Planococcus maritimus chr | 94.17 | Planococcus antarcticus | 92.90 |
+| 5 Description Graphics | Planococcus citreus plasmid | 95.35 | Planococcus sp. plasmid  | 94.69 | Planococcus sp. plasmid | 94.60 | Staphylococcus sciuri plasmid | 89.80 | Mammaliicoccus sciuri plasmid | 89.80 |
+| 6 Description Graphics | Planococcus citreus plasmid | 94.69 | Planococcus sp. plasmid | 94.21 | Planococcus sp. plasmid | 93.61 | Staphylococcus scirui plasmid | 94.09 | Planococcus kocurii plasmid | 87.33 |
 
 ## Step 10: Genome alignment
 

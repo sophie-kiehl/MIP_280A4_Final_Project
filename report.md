@@ -324,7 +324,7 @@ Search parameters:
 | 5 [Description](https://github.com/sophie-kiehl/MIP_280A4_Final_Project/blob/main/BLAST_results/5_Description.png) [Graphics](https://github.com/sophie-kiehl/MIP_280A4_Final_Project/blob/main/BLAST_results/5_Graphics.png) | Planococcus citreus plasmid | 95.35 | Planococcus sp. plasmid  | 94.69 | Planococcus sp. plasmid | 94.60 | Staphylococcus sciuri plasmid | 89.80 | Mammaliicoccus sciuri plasmid | 89.80 |
 | 6 [Description](https://github.com/sophie-kiehl/MIP_280A4_Final_Project/blob/main/BLAST_results/6_Description.png) [Graphics](https://github.com/sophie-kiehl/MIP_280A4_Final_Project/blob/main/BLAST_results/6_Graphics.png) | Planococcus citreus plasmid | 94.69 | Planococcus sp. plasmid | 94.21 | Planococcus sp. plasmid | 93.61 | Staphylococcus scirui plasmid | 94.09 | Planococcus kocurii plasmid | 87.33 |
 
-## Step 10: Genome coverage
+## Step 10: Illumina reads coverage of assembly
 
 1. Build an index
 
@@ -394,3 +394,16 @@ samtools depth Illumina_reads_mapped_to_scaffolds.sorted.bam > Illumina_reads_ma
 ```
 
 PROBLEM: VISUALIZING COVERAGE IN GENEIOUS (HAVE SAM, TXT, CSV, AND BLANK FILE TYPES)
+
+## Step 11: Nanopore reads coverage of assembly
+
+1. Install minimap
+
+```
+conda install -c bioconda minimap2
+```
+
+2.
+```
+minimap2 -a -x map-ont ./paired_and_nanopore_spades_assembly/scaffolds.fasta Planococcus_Nanopore.fastq.gz > Nanopore_reads_mapped_to_scaffolds.sam
+```

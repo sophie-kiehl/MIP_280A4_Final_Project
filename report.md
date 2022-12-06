@@ -493,7 +493,7 @@ oriTs: 0
 
 4. Import scaffolds.gff3 to Geneious Prime to visualize the annotation
 
-LINK TO ANNOTATION SCREENSHOTS
+[Annotation results](https://github.com/sophie-kiehl/MIP_280A4_Final_Project/tree/main/Annotation_results)
 
 ## Step 13: Genome Assembly
 

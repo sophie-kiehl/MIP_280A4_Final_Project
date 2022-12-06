@@ -283,17 +283,29 @@ get first_12_scaffolds_fasta
 4. [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&PAGE_TYPE=BlastSearch&LINK_LOC=blasthome) the first 3 scaffolds three times (randomly selecting ~30K bp each time) and the fourth, fifth, and sixth scaffolds in their entireties.
 
 Search parameters:
+
    Standard database
+   
    Nucleotide collection
+   
    Optimize for highly similar sequences
+   
    Max target sequences: 100
+   
    Expect threshold: 0.05
+   
    Word size: 28
+   
    Max matches in a query range: 0
+   
    Match/Mismatch Scores: 1, -2
+   
    Gap costs: Linear
+   
    Filter: low complexity regions
+   
    Mask: lookup table only
+   
 
 5. Record summary results
 

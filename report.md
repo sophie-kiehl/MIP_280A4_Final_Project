@@ -288,7 +288,7 @@ get first_12_scaffolds_fasta
 
 | Scaffold (run) | 1 | % | 2 | % | 3 | % | 4 | % | 5 | % |
 | --- | ---| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 (1) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
+| 1 (1) Description Graphics | Planococcus sp. chr | 99 | Planococcus rifietoensis chr | 99 | Planococcus plakortidis chr | 99 | Planococcus maritimus chr | 99 | Planococcus maritimus chr | 99 |
 | 1 (2) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
 | 1 (3) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |
 | 1 (4) Description Graphics | ? | ? | ? | ? | ? | ? | ? | ? | ? | ? |

@@ -547,7 +547,6 @@ Pairwise identity: 34.5%
 
 ![Dotplot_chromosome](https://user-images.githubusercontent.com/115187825/206001388-c7d29aae-2e0c-4d31-8e47-47528249316a.png)
 
-
 11. Select Nodes 4-6 and reference plasmid > Align/Assemble > Align Whole Genomes > LASTZ > select NZ_CP059541 as reference)
 
 12. Record dotplot

@@ -343,18 +343,36 @@ bowtie2 -x Illumina_and_nanopore_index \
    -S Illumina_reads_mapped_to_scaffolds.sam
 ```
 
-3. Convert the sam file to a bam file
+3. Record results
+
+818439 reads; of these:
+  818439 (100.00%) were paired; of these:
+    28918 (3.53%) aligned concordantly 0 times
+    768834 (93.94%) aligned concordantly exactly 1 time
+    20687 (2.53%) aligned concordantly >1 times
+    ----
+    28918 pairs aligned concordantly 0 times; of these:
+      23348 (80.74%) aligned discordantly 1 time
+    ----
+    5570 pairs aligned 0 times concordantly or discordantly; of these:
+      11140 mates make up the pairs; of these:
+        6676 (59.93%) aligned 0 times
+        3157 (28.34%) aligned exactly 1 time
+        1307 (11.73%) aligned >1 times
+99.59% overall alignment rate
+
+4. Convert the sam file to a bam file
 
 ```
 samtools view -b Illumina_reads_mapped_to_scaffolds.sam > Illumina_reads_mapped_to_scaffolds.bam
 ```
-4. Sort the bam files
+5. Sort the bam files
 
 ```
 samtools sort -T tmp -O 'bam' Illumina_reads_mapped_to_scaffolds.bam  > Illumina_reads_mapped_to_scaffolds.sorted.bam
 ```
 
-5. Use samtools to find the average coverage of the Illumina reads to the Illumina and Nanopore scaffolds
+6. Use samtools to find the average coverage of the Illumina reads to the Illumina and Nanopore scaffolds
 
 ```
 samtools depth Illumina_reads_mapped_to_scaffolds.sorted.bam > Illumina_reads_mapped_to_scaffolds_coverage.txt

@@ -440,6 +440,8 @@ PROBLEM: SAME, JUST WITH NANOPORE
 conda install -c conda-forge -c bioconda bakta
 ```
 
+PROBLEM: CONDA ENVIRONMENT NOT SOLVING
+
 2. Annotate assembly
 
 ```

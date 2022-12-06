@@ -381,7 +381,7 @@ bowtie2 -x Illumina_and_nanopore_index \
 ```
 samtools view -b Illumina_reads_mapped_to_scaffolds.sam > Illumina_reads_mapped_to_scaffolds.bam
 ```
-5. Sort the bam files
+5. Sort the bam file
 
 ```
 samtools sort -T tmp -O 'bam' Illumina_reads_mapped_to_scaffolds.bam  > Illumina_reads_mapped_to_scaffolds.sorted.bam
@@ -390,8 +390,10 @@ samtools sort -T tmp -O 'bam' Illumina_reads_mapped_to_scaffolds.bam  > Illumina
 6. Use samtools to find the average coverage of the Illumina reads to the Illumina and Nanopore scaffolds
 
 ```
-samtools depth Illumina_reads_mapped_to_scaffolds.sorted.bam > Illumina_reads_mapped_to_scaffolds_coverage.txt
+samtools depth Illumina_reads_mapped_to_scaffolds.sorted.bam > Illumina_reads_mapped_to_scaffolds_coverage.sam
 ```
+
+7. Record results
 
 PROBLEM: VISUALIZING COVERAGE IN GENEIOUS (HAVE SAM, TXT, CSV, AND BLANK FILE TYPES)
 
@@ -403,7 +405,27 @@ PROBLEM: VISUALIZING COVERAGE IN GENEIOUS (HAVE SAM, TXT, CSV, AND BLANK FILE TY
 conda install -c bioconda minimap2
 ```
 
-2.
+2. Align the reads to the scaffold
 ```
 minimap2 -a -x map-ont ./paired_and_nanopore_spades_assembly/scaffolds.fasta Planococcus_Nanopore.fastq.gz > Nanopore_reads_mapped_to_scaffolds.sam
 ```
+
+3. Convert the sam file to a bam file
+
+```
+samtools view -b Nanopore_reads_mapped_to_scaffolds.sam > Nanopore_reads_mapped_to_scaffolds.bam
+```
+
+4. Sort the bam file
+
+```
+samtools sort -T tmp -O 'bam' Nanopore_reads_mapped_to_scaffolds.bam  > Nanopore_reads_mapped_to_scaffolds.sorted.bam
+```
+
+5. Use samtools to find the average coverage of the Nanopore reads to the Illumina and Nanopore scaffolds
+
+```
+samtools depth Nanopore_reads_mapped_to_scaffolds.sorted.bam > Nanopore_reads_mapped_to_scaffolds_coverage.sam
+```
+
+6. Record results

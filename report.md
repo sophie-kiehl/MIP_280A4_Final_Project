@@ -396,22 +396,10 @@ samtools coverage Illumina_reads_mapped_to_scaffolds.sorted.bam > Illumina_reads
 7. Record results
 
 ```
-head Illumina_reads_mapped_to_scaffolds_coverage.txt
+less Illumina_reads_mapped_to_scaffolds_coverage.txt
 ```
 
-| Node | Mean coverage depth |
-| --- | --- |
-| 1 | 102.046 |
-| 2 | 98.327 |
-| 3 | 143.089 |
-| 4 | 87.3652 |
-| 5 | 759.216 |
-| 6 | 1361.22 |
-| 7 | 37.4 |
-| 8 | 34.5 |
-| 9 | 38.4 |
-| 10 | 0 |
-| 11 | 0.765625 |
+
 
 ## Step 11: Nanopore reads coverage of assembly
 
@@ -444,9 +432,27 @@ samtools sort -T tmp -O 'bam' Nanopore_reads_mapped_to_scaffolds.bam  > Nanopore
 samtools coverage Nanopore_reads_mapped_to_scaffolds.sorted.bam > Nanopore_reads_mapped_to_scaffolds_coverage.txt
 ```
 
-6. Record results
+6. Compare coverage between 
 
-PROBLEM: SAME, JUST WITH NANOPORE
+```
+less Illumina_reads_mapped_to_scaffolds_coverage.txt
+
+less Nanopore_reads_mapped_to_scaffolds_coverage.txt
+```
+
+| Node | Illumina coverage depth | Nanopore coverage depth |
+| --- | --- | --- |
+| 1 | 102.046 | 9.4014 |
+| 2 | 98.327 | 9.36977 |
+| 3 | 143.089 | 12.3271 |
+| 4 | 87.3652 | 8.14942 |
+| 5 | 759.216 | 150.529 |
+| 6 | 1361.22 | 232.629 |
+| 7 | 37.4 | 0 |
+| 8 | 34.5 | 0 |
+| 9 | 38.4 | 0 |
+| 10 | 0 | 0 |
+| 11 | 0.765625 | 0 |
 
 ## Step 12: Annotation of assembly
 

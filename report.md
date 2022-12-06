@@ -475,3 +475,5 @@ gaps: 2
 oriCs/oriVs: 3
 
 oriTs: 0
+
+4. Import scaffolds.gff3 to Geneious Prime to visualize the annotation

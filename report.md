@@ -390,12 +390,28 @@ samtools sort -T tmp -O 'bam' Illumina_reads_mapped_to_scaffolds.bam  > Illumina
 6. Use samtools to find the average coverage of the Illumina reads to the Illumina and Nanopore scaffolds
 
 ```
-samtools depth Illumina_reads_mapped_to_scaffolds.sorted.bam > Illumina_reads_mapped_to_scaffolds_coverage.sam
+samtools coverage Illumina_reads_mapped_to_scaffolds.sorted.bam > Illumina_reads_mapped_to_scaffolds_coverage.txt
 ```
 
 7. Record results
 
-PROBLEM: VISUALIZING COVERAGE IN GENEIOUS (HAVE SAM, TXT, CSV, AND BLANK FILE TYPES)
+```
+head Illumina_reads_mapped_to_scaffolds_coverage.txt
+```
+
+| Node | Mean coverage depth |
+| --- | --- |
+| 1 | 102.046 |
+| 2 | 98.327 |
+| 3 | 143.089 |
+| 4 | 87.3652 |
+| 5 | 759.216 |
+| 6 | 1361.22 |
+| 7 | 37.4 |
+| 8 | 34.5 |
+| 9 | 38.4 |
+| 10 | 0 |
+| 11 | 0.765625 |
 
 ## Step 11: Nanopore reads coverage of assembly
 
@@ -425,7 +441,7 @@ samtools sort -T tmp -O 'bam' Nanopore_reads_mapped_to_scaffolds.bam  > Nanopore
 5. Use samtools to find the average coverage of the Nanopore reads to the Illumina and Nanopore scaffolds
 
 ```
-samtools depth Nanopore_reads_mapped_to_scaffolds.sorted.bam > Nanopore_reads_mapped_to_scaffolds_coverage.sam
+samtools coverage Nanopore_reads_mapped_to_scaffolds.sorted.bam > Nanopore_reads_mapped_to_scaffolds_coverage.sam
 ```
 
 6. Record results

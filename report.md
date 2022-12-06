@@ -505,19 +505,46 @@ cd paired_and_nanopore_spades_assembly
 seqtk seq -A scaffolds.fasta | head -12 > scaffolds_1-6.fasta
 ```
 
-2. Instal the Mauve plug-in in Geneious Prime
+2. Install the Mauve plug-in in Geneious Prime
 
-3. Import the scaffolds_1-6.fasta into Geneious
+3. Import the scaffolds_1-6.fasta into Geneious (create sequence list)
 
-4. Save Nodes 1 through 3 as their reverse complement
+4. Import and download _Planococcus maritimus_ strain XJ11 chromosome, complete genome (ascension: NZ_CP059540) into Geneious folder
 
-5. Import _Planococcus maritimus_ strain XJ11 chromosome, complete genome (ascension: NZ_CP059540) into Geneious folder
-
-5. Select Nodes 1-3 and reference genome > Align/Assemble > Align Whole Genomes > MAUVE Genome > default settings
+5. Select scaffolds_1-6.fasta and reference chromosome > Align/Assemble > Align Whole Genomes > MAUVE Genome > MCM algorithm
 
 6. Record alignment
 
-7. Align/Assemble > Align Whole Genomes > LASTZ > default settings
+LINK TO SCREENSHOT
 
-8. Record dotplot
+Pairwise Identity: 89%
+
+7. Import and download _Planococcus maritimus_ strain XJ11 plasmid unnamed 1, complete genome (ascension: NZ_CP059541) into Geneious folder
+
+9. Import scaffolds_1-6.fasta into Geneious, keeping sequence separate
+
+10. Save Nodes 5 and 6 as their reverse complements
+
+11. Select Nodes 4 through 6 > right click > Group sequences into a list
+
+12. Select grouped list and referenced plasmid > Align/Assemble > Align Whole Genomes > MAUVE Genome > Progressive Mauve algorithm
+
+8. Select Nodes 4 through 6 and reference plasmid > Align/Assemble > Align Whole Genomes > MAUVE Genome > Progressive Mauve algorithm
+
+LINK TO SCREENSHOT
+
+Pairwise identity: 34.5%
+
+LINK TO SCREENSHOT
+
+8. Save Nodes 1-3 as their reverse complements
+
+9. Select Nodes 1-3 and reference chromosome > Align/Assemble > Align Whole Genomes > LASTZ > select NZ_CP059540 as reference)
+
+10. Record dotplot
+
+LINK TO SCREENSHOT
+
+11. Select Nodes 4-6 and reference plasmid > Align/Assemble > Align Whole Genomes > LASTZ > select NZ_CP059541 as reference)
+
 

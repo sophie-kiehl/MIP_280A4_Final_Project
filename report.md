@@ -440,16 +440,38 @@ PROBLEM: SAME, JUST WITH NANOPORE
 conda install -c conda-forge -c bioconda bakta
 ```
 
-PROBLEM: CONDA ENVIRONMENT NOT SOLVING
-
 2. Annotate assembly
 
 ```
 bakta --db /home/data_for_classes/bakta_database/db ./paired_and_nanopore_spades_assembly/scaffolds.fasta
 ```
 
-3. Run amrfinder
+3. Record annotation summary
 
-```
-amrfinder_update --database /home/data_for_classes/bakta_database/db/amrfinderplus-db 
-```
+tRNAs: 72
+
+tmRNAs: 1
+
+rRNAs: 25
+	
+ncRNAs: 25
+	
+ncRNA regions: 63
+
+CRISPR arrays: 0
+
+CDSs: 3490
+
+hypotheticals: 513
+
+pseudogenes: 10
+
+signal peptides: 0
+
+sORFs: 0
+
+gaps: 2
+
+oriCs/oriVs: 3
+
+oriTs: 0

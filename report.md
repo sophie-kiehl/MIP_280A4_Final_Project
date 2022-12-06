@@ -492,3 +492,32 @@ oriCs/oriVs: 3
 oriTs: 0
 
 4. Import scaffolds.gff3 to Geneious Prime to visualize the annotation
+
+LINK TO ANNOTATION SCREENSHOTS
+
+## Step 13: Genome Assembly
+
+1. Extract the first six scaffolds from the Illumina and Nanopore assembly to get the chromosome and plasmid sequences
+
+```
+cd paired_and_nanopore_spades_assembly
+
+seqtk seq -A scaffolds.fasta | head -12 > scaffolds_1-6.fasta
+```
+
+2. Instal the Mauve plug-in in Geneious Prime
+
+3. Import the scaffolds_1-6.fasta into Geneious
+
+4. Save Nodes 1 through 3 as their reverse complement
+
+5. Import _Planococcus maritimus_ strain XJ11 chromosome, complete genome (ascension: NZ_CP059540) into Geneious folder
+
+5. Select Nodes 1-3 and reference genome > Align/Assemble > Align Whole Genomes > MAUVE Genome > default settings
+
+6. Record alignment
+
+7. Align/Assemble > Align Whole Genomes > LASTZ > default settings
+
+8. Record dotplot
+

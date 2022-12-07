@@ -495,6 +495,8 @@ oriTs: 0
 
 [Annotation results](https://github.com/sophie-kiehl/MIP_280A4_Final_Project/tree/main/Annotation_results)
 
+From the annotation, I can tell that there is only one plasmid (because of the single origin of replication in node 4). The majority of other annotations are for rRNA and riboswitches. 
+
 ## Step 13: Genome Assembly
 
 1. Extract the first six scaffolds from the Illumina and Nanopore assembly to get the chromosome and plasmid sequences
@@ -517,6 +519,8 @@ seqtk seq -A scaffolds.fasta | head -12 > scaffolds_1-6.fasta
 
 Pairwise Identity: 89%
 
+Nodes 1-3 align very well with the chromosome from _Planococcus maritimus_.
+
 ![Mauve_chromosome](https://user-images.githubusercontent.com/115187825/206001210-79f5979d-9c8f-4f10-b42c-8553411e9b82.png)
 
 ![Alignment_chromosome](https://user-images.githubusercontent.com/115187825/206001254-9ca7abd7-6f5d-47f3-9a70-90339a8d4974.png)
@@ -535,6 +539,8 @@ Pairwise Identity: 89%
 
 Pairwise identity: 34.5%
 
+NEED TO UPDATE
+
 ![Mauve_plasmid](https://user-images.githubusercontent.com/115187825/206001328-ef06d776-3d58-4867-bfe8-8c3189c549dc.png)
 
 ![Alignment_plasmid](https://user-images.githubusercontent.com/115187825/206001341-54132917-169d-478e-9d5a-e24b2a3397e1.png)
@@ -545,11 +551,15 @@ Pairwise identity: 34.5%
 
 10. Record dotplot
 
+There are no major structural variations between this assemlby and the reference.
+
 ![Dotplot_chromosome](https://user-images.githubusercontent.com/115187825/206001388-c7d29aae-2e0c-4d31-8e47-47528249316a.png)
 
 11. Select Nodes 4-6 and reference plasmid > Align/Assemble > Align Whole Genomes > LASTZ > select NZ_CP059541 as reference)
 
 12. Record dotplot
+
+There are no major structural variations between thsi assembly and the reference.
 
 ![Dotplot_plasmid](https://user-images.githubusercontent.com/115187825/206001418-e5e7c19f-4628-4080-a97f-9b0e9c45b8fd.png)
 

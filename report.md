@@ -539,7 +539,7 @@ Nodes 1-3 align very well with the chromosome from _Planococcus maritimus_.
 
 Pairwise identity: 34.5%
 
-NEED TO UPDATE
+The extremely low average nucleotide identity makes me unsure whether nodes 4-6 came from this plasmid. However, they did align well on a portion of the plasmid.
 
 ![Mauve_plasmid](https://user-images.githubusercontent.com/115187825/206001328-ef06d776-3d58-4867-bfe8-8c3189c549dc.png)
 
@@ -559,7 +559,7 @@ There are no major structural variations between this assemlby and the reference
 
 12. Record dotplot
 
-There are no major structural variations between thsi assembly and the reference.
+The assembly is approximately 45 Kbp shorter than the reference. Also, there is a small insertion in the assembly that was not present in the reference.
 
 ![Dotplot_plasmid](https://user-images.githubusercontent.com/115187825/206001418-e5e7c19f-4628-4080-a97f-9b0e9c45b8fd.png)
 

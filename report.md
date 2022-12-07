@@ -2,7 +2,7 @@
 
 ## Initial Summary
 
-This report documents the final project I did for MIP 280A4, Microbial Sequence Analysis, in the fall of 2022. In this project, I used Illumina and Nanopore sequencing data from a bacterial genome to identify a 
+This report documents the final project I did for MIP 280A4, Microbial Sequence Analysis, in the fall of 2022. In this project, I used Illumina and Nanopore sequencing data from a _Planococcus_ genome to identify its species using de novo assembly, BLAST, and genome alignments.
 
 It is written in [Markdown format](https://www.markdownguide.org/basic-syntax/). 
 

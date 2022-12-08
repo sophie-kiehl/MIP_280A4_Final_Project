@@ -2,7 +2,7 @@
 
 ## Initial Summary
 
-This report documents the final project I did for MIP 280A4, Microbial Sequence Analysis, in the fall of 2022. In this project, I used Illumina and Nanopore sequencing data from a _Planococcus_ genome to identify its species using de novo assembly, BLAST, and genome alignments.
+This report documents the final project I did for MIP 280A4, Microbial Sequence Analysis, in the fall of 2022. In this project, I used Illumina and Nanopore sequencing data from a _Planococcus_ genome to identify its species using de novo assembly, BLAST, and genome alignments. I found that my bacteria has 1 plasmid and likely 1 chromosome. A possible candidate for its species is _Planococcus maritimus_. 
 
 It is written in [Markdown format](https://www.markdownguide.org/basic-syntax/). 
 
